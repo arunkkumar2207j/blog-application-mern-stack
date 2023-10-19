@@ -14,6 +14,8 @@ import { useState } from "react";
 import CreatePost from "./components/create/CreatePost";
 import DetailView from "./components/details/DetailView";
 import Update from "./components/create/Update";
+import About from "./components/about/about";
+import Contact from "./components/contact/Contact";
 
 const PrivateRoute = ({ isAuthenticated, ...props }) => {
   return isAuthenticated ? 
@@ -74,7 +76,15 @@ function App() {
                 <PrivateRoute isAuthenticated={isAuthenticated} />
               }
             >
-              <Route path="/about" element={<Update />} />
+              <Route path="/about" element={<About />} />
+            </Route>
+            <Route
+              path="/contact"
+              element={
+                <PrivateRoute isAuthenticated={isAuthenticated} />
+              }
+            >
+              <Route path="/contact" element={<Contact />} />
             </Route>
           </Routes>
         </div>
