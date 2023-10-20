@@ -4,6 +4,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { DataContext } from "../../../context/DataProvider";
 import { API } from "../../../services/api"
 import Comment from './Comment';
+import { isEmpty } from '../../../utils/common.utils';
 
 const Container = styled(Box)`
     margin-top: 100px;
@@ -51,14 +52,15 @@ function Comments({post}) {
         setToggle(prevState => !prevState)
     }
     useEffect(() => {
-        const getData = async () => {
-            const response = await API.getAllComments(post._id);
-            if(response.isSuccess) {
-                setComments(response.data)
+        if(!isEmpty(post)) {
+            const getData = async () => {
+                const response = await API.getAllComments(post._id);
+                if(response.isSuccess) {
+                    setComments(response.data)
+                }
             }
+            getData();
         }
-        getData();
-
     }, [post, toggle])
   return (
     <Box>
