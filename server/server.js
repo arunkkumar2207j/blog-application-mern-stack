@@ -7,7 +7,7 @@ import Router from "./routes/route.js";
 
 dotenv.config();
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use(cors())
@@ -15,14 +15,15 @@ app.use(bodyParser.json({extended: true}));
 app.use(bodyParser.urlencoded({extended: true}))
 app.use("/", Router)
 
-// app.get("/", (req, res) => {
-//     res.status(200).send({message: "Home"})
-// })
+if(process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"))
+}
 
 app.listen(PORT, () => {
     console.log(`App server working Successfully on ${PORT}!`);
 })
 const USERNAME = process.env.DB_USERNAME;
 const PASSWORD = process.env.DB_PASSWORD;
+const CONNECTION_STRING = process.env.MONGODB_URI || `mongodb+srv://${USERNAME}:${PASSWORD}@clustermumbai.9zjoada.mongodb.net/blog`;
 
-ConnectDB(USERNAME, PASSWORD);
+ConnectDB(CONNECTION_STRING);
