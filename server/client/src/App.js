@@ -1,5 +1,5 @@
 import "./App.css";
-import DataProvider from "./context/DataProvider";
+import DataProvider from "./context/DataProvider.jsx";
 import {
   BrowserRouter,
   Routes,
@@ -7,15 +7,15 @@ import {
   Navigate,
   Outlet,
 } from "react-router-dom";
-import Login from "./components/account/Login";
-import Home from "./components/home/Home";
-import Header from "./components/header/Header";
+import Login from "./components/account/Login.jsx";
+import Home from "./components/home/Home.jsx";
+import Header from "./components/header/Header.jsx";
 import { useState } from "react";
-import CreatePost from "./components/create/CreatePost";
-import DetailView from "./components/details/DetailView";
-import Update from "./components/create/Update";
-import About from "./components/about/about";
-import Contact from "./components/contact/Contact";
+import CreatePost from "./components/create/CreatePost.jsx";
+import DetailView from "./components/details/DetailView.jsx";
+import Update from "./components/create/Update.jsx";
+import About from "./components/about/about.jsx";
+import Contact from "./components/contact/Contact.jsx";
 
 const PrivateRoute = ({ isAuthenticated, ...props }) => {
   return isAuthenticated ? 

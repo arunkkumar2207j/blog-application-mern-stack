@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
-import { categories } from "../../constants/data";
+import { categories } from "../../constants/data.js";
 import styled from '@emotion/styled';
 import { Link, useSearchParams } from 'react-router-dom';
 

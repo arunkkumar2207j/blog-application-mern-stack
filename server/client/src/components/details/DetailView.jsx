@@ -4,8 +4,8 @@ import { API } from '../../services/api';
 import { Box, Typography } from "@mui/material";
 import {Edit, Delete} from "@mui/icons-material";
 import styled from '@emotion/styled';
-import {DataContext} from "../../context/DataProvider";
-import Comments from './comments/Comments';
+import {DataContext} from "../../context/DataProvider.jsx";
+import Comments from './comments/Comments.jsx';
 
 const Container = styled(Box)(({theme}) => ({
     margin: "50px 100px",

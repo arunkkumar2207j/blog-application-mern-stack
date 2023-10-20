@@ -1,6 +1,6 @@
 import { Box, Typography, styled } from '@mui/material'
 import React from 'react'
-import { addElipsis } from '../../../utils/common.utils'
+import { addElipsis } from '../../../utils/common.utils.js'
 
 const Container = styled(Box)`
   border: 1px solid #d3cede;

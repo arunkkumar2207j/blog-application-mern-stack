@@ -1,9 +1,7 @@
-// import React, { useContext } from 'react'
-// import { DataContext } from '../../context/DataProvider'
 import Banner from '../banner/Banner'
 import Categories from './Categories'
 import { Grid } from '@mui/material'
-import Posts from './post/Posts'
+import Posts from './post/Posts.js'
 
 function Home() {
     // const { account } = useContext(DataContext)

@@ -1,8 +1,8 @@
 import { Box, Typography, styled } from '@mui/material'
 import React, { useContext } from 'react'
-import { DataContext } from '../../../context/DataProvider'
+import { DataContext } from '../../../context/DataProvider.jsx'
 import {Delete} from "@mui/icons-material";
-import { API } from '../../../services/api';
+import { API } from '../../../services/api.js';
 
 const Component = styled(Box)`
     margin-top: 30px;

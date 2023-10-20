@@ -3,8 +3,8 @@ import { Box, Button, FormControl, InputBase, TextareaAutosize } from "@mui/mate
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import styled from '@emotion/styled';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { DataContext } from '../../context/DataProvider';
-import { API } from '../../services/api';
+import { DataContext } from '../../context/DataProvider.jsx';
+import { API } from '../../services/api.js';
 const Image = styled("img")({
     width: '100%',
     height: "50vh",

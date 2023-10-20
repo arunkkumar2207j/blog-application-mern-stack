@@ -1,10 +1,10 @@
 import styled from '@emotion/styled'
 import { Box, Button, TextareaAutosize, Typography } from '@mui/material'
 import React, { useContext, useEffect, useState } from 'react';
-import { DataContext } from "../../../context/DataProvider";
-import { API } from "../../../services/api"
-import Comment from './Comment';
-import { isEmpty } from '../../../utils/common.utils';
+import { DataContext } from "../../../context/DataProvider.jsx";
+import { API } from "../../../services/api.js"
+import Comment from './Comment.jsx';
+import { isEmpty } from '../../../utils/common.utils.js';
 
 const Container = styled(Box)`
     margin-top: 100px;
