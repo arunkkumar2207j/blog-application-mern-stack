@@ -20,11 +20,5 @@ export const getType = (value, body) => {
 }
 
 export const isEmpty = (obj) => {
-    for (const prop in obj) {
-      if (Object.hasOwn(obj, prop)) {
-        return false;
-      }
-    }
-  
-    return true;
+    return Object.keys(obj).length === 0;
   }
